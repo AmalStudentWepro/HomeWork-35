@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <h1>Проверка регулярных выражений</h1>
+
+    <div class="field">
+      <label>Пароль (от 6 символов, 1 цифра, 1 заглавная):</label><br/>
+      <input type="text" id="passwordInput" />
+    </div>
+
+  <div class="field">
+    <label>Имя (только буквы, 2-20 символов):</label><br/>
+    <input type="text" id="nameInput" />
+  </div>
+
+  <div class="field">
+    <label>Ссылка (http:// или https://):</label><br/>
+    <input type="text" id="urlInput" />
+  </div>
+
+  <div class="field">
+    <label>Email:</label><br/>
+    <input type="text" id="emailInput" />
+  </div>
+
+  <div class="field">
+    <label>Очистка HTML-тегов:</label><br/>
+    <input type="text" id="htmlInput" value="<b>Надеюсь 10</b> <h1>баллов</h1>"/> 
+    <button onclick="removeTags()">Очистить</button>
+    <p class="result" id="htmlResult"></p>
+  </div>
+
+  <hr/>
+
+  <h2>.replace() Примеры</h2>
+
+  <div class="field">
+    <label>Дата (2025-04-08 = 08.04.2025):</label><br/>
+    <input type="text" id="dateInput" value="2025-04-08" /> 
+    <button onclick="formatDate()">Форматировать</button>
+    <p class="result" id="dateResult"></p>
+  </div>
+
+  <div class="field">
+    <label>Заменить пробелы на дефисы:</label><br/>
+    <input type="text" id="spaceInput" value="пример" />
+    <button onclick="replaceSpaces()">Заменить</button>
+    <p class="result" id="spaceResult"></p>
+  </div>
+
+  <div class="field">
+    <label>Удалить цифры из строки:</label><br/>
+    <input type="text" id="digitInput" value="текст123 пример7560388374" />
+    <button onclick="removeDigits()">Удалить</button>
+    <p class="result" id="digitResult"></p>
+  </div>
+
+  <button onclick="validate()">Проверить все</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
