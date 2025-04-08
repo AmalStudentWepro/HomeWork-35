@@ -10,7 +10,7 @@ function validate() {
         document.getElementById('passwordInput').style.borderColor = "red";
     }
 
-    if (name.length >= 2 && name.length <= 20) {
+    if (name.length >= 2 && name.length <= 20 && /^[A-Za-zА-Яа-яЁё]+$/.test(name)) {
         document.getElementById('nameInput').style.borderColor = "green";
     } else {
         document.getElementById('nameInput').style.borderColor = "red";
@@ -28,6 +28,7 @@ function validate() {
         document.getElementById('emailInput').style.borderColor = "red";
     }
 }
+
 
 function removeTags() {
     var input = document.getElementById('htmlInput').value;
